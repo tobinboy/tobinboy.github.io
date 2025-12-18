@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- Title -->
+    <title>Chanjin Park - Robotics Researcher</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1000">
+
+    <!-- Isotope JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+  </head>
+
+  <body id="body">
+
+    <div id="main">
+      <div id="intro">
+        <div id="intro-text">
+          <h1>Chanjin Park</h1>
+          <p>
+            I am a robotics researcher and M.S. candidate at <a href="https://www.yonsei.ac.kr/">Yonsei University</a>, specializing in generative model–based imitation learning and bio-signal–driven robotic systems.
+            <br><br>
+            Throughout my master's program, I have studied optimization, reinforcement learning, and linear systems, and have conducted research on enabling robots to reproduce human behaviors through imitation learning. In particular, I am highly interested in generative-model approaches that allow robots to generate and track both positional and force trajectories.
+            <br><br>
+            Moving forward, I aim to continue advancing imitation learning methods that can robustly generate both motion and force, ultimately enabling robots to solve complex real-world tasks that are currently difficult to perform.
+            <br><br>
+            <!-- 소셜 링크를 추가하려면 아래 주석을 해제하고 URL을 수정하세요 -->
+            <!-- <a href="#">G. Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
+            <!-- <a href="#">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
+            <!-- <a href="#">Github</a> -->
+            <!-- <br><br> -->
+            <!-- your.email at yonsei dot ac dot kr -->
+          </p>
+        </div>
+        <div id="intro-image">
+          <img src="images/profile.jpg">
+        </div>
+      </div>
+
+      <div id="filters" class="button-group">
+        <button class="button is-checked" data-filter=".publication">Research</button>
+        <button class="button" data-filter=".project">Projects</button>
+        <button class="button" data-filter=".education">Education</button>
+      </div>
+
+      <div class="grid">
+
+        <!-- Research 섹션 -->
+        <div id="main-publications">
+
+          <div class="list-item publication" data-category="publication">
+            <p style="color: #666; font-style: italic;">📚 연구 프로젝트와 논문을 이곳에 추가하세요.</p>
+          </div>
+
+          <!-- 연구/논문 추가 예시 (주석 해제 후 사용)
+          <div class="list-item publication" data-category="publication">
+            <a href="#" class="thumbnail">
+              <img src="images/your-research-image.jpg" alt="" />
+            </a>
+            <div class="project-description">
+              <h3><a href="#">논문 제목</a></h3>
+              <p>
+                저자1, 저자2, <b>Chanjin Park</b>, 저자3<br>
+                <i>학회명 2024</i><br>
+                <a href="#">Webpage</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                <a href="#">PDF</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                <a href="#">Code</a>
+              </p>
+            </div>
+          </div>
+          -->
+
+        </div>
+
+        <!-- Projects 섹션 -->
+        <div class="list-item project" data-category="project">
+          <p style="color: #666; font-style: italic;">🔧 프로젝트를 이곳에 추가하세요.</p>
+        </div>
+
+        <!-- 프로젝트 추가 예시 (주석 해제 후 사용)
+        <div class="list-item project" data-category="project">
+          <a href="#" class="thumbnail">
+            <img src="images/your-project-image.jpg" alt="" />
+          </a>
+          <div class="project-description">
+            <h3><a href="#">프로젝트 제목</a></h3>
+            <p>
+              프로젝트 설명을 여기에 작성하세요.<br>
+              <a href="#">Demo</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+              <a href="#">Code</a>
+            </p>
+          </div>
+        </div>
+        -->
+
+        <!-- Education 섹션 -->
+        <div class="list-item education" data-category="education">
+          <p class="date">2024 - Present</p>M.S. in Mechanical Engineering, <a href="https://www.yonsei.ac.kr/">Yonsei University</a>
+        </div>
+
+        <!-- 학력 추가 예시 (주석 해제 후 사용)
+        <div class="list-item education" data-category="education">
+          <p class="date">2020 - 2024</p>B.S. in Mechanical Engineering, <a href="#">대학교 이름</a>
+        </div>
+        -->
+
+      </div>
+
+      <div id="footer">
+        © Chanjin Park 2025
+      </div>
+
+    </div>
+
+    <script>
+
+      // Isotope grid.
+      var defined_filters = defined_filters || { defined_class: '*' };
+      var defined_sort = defined_sort || { defined_order: 'original-order' };
+
+      var defined_button_filter = defined_button_filter || 'data-filter';
+      var defined_button_sort = defined_button_sort || 'data-sort-by';
+
+      var defined_grid_layoutMode = defined_grid_layoutMode || { layoutMode: 'fitRows' };
+
+      var defined_button_group_filter = defined_button_group_filter || '.button-group:first';
+      var defined_button_group_sort = defined_button_group_sort || '.button-group:last';
+
+      var defined_button_group = defined_button_group || '.button-group';
+      var defined_grid = defined_grid || '.grid';
+      var defined_button = defined_button || '.button';
+      var defined_button_ischecked = defined_button_ischecked || 'is-checked';
+      var defined_click = defined_click || false;
+      var defined_stagger = defined_stagger || 0;
+
+      var $grid = $(defined_grid).isotope({
+        itemSelector: '.list-item',
+        layoutMode: defined_grid_layoutMode.layoutMode,
+        filter: '.publication',
+        stagger: defined_stagger
+      });
+
+      // Filter buttons.
+      $(defined_button_group).on('click', defined_button, function() {
+        var filterValue = $(this).attr(defined_button_filter);
+        if (filterValue) {
+          $(defined_button_group_filter).find('.is-checked').removeClass('is-checked');
+          $(this).addClass('is-checked');
+          $grid.isotope({ filter: filterValue });
+        }
+        var sortValue = $(this).attr(defined_button_sort);
+        if (sortValue) {
+          $(defined_button_group_sort).find('.is-checked').removeClass('is-checked');
+          $(this).addClass('is-checked');
+          $grid.isotope({ sortBy: sortValue });
+        }
+      });
+
+    </script>
+
+  </body>
+</html>
