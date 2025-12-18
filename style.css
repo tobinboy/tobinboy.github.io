@@ -189,8 +189,9 @@ h2 {
 
 .list-item p.date {
   display: inline-block;
-  width: 3em;
+  width: 10em;
   color: #a0a8b0;
+  margin-right: 1em;
 }
 
 /**************************************************/
